@@ -10,7 +10,7 @@ export default function Home() {
       {ALBUMS.map((album) => (
         <Image
           key={album.name}
-          className="m-4"
+          className="m-4 border border-black shadow-md"
           src={album.image}
           blurDataURL="/placeholder.png"
           alt={album.name}
