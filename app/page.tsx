@@ -12,6 +12,7 @@ export default function Home() {
           key={album.name}
           className="m-4"
           src={album.image}
+          blurDataURL="/placeholder.png"
           alt={album.name}
           width={250}
           height={250}
