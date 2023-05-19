@@ -6,7 +6,7 @@ import { ALBUMS } from "@/types"
 
 export default function Home() {
   return (
-    <main className="flex flex-row flex-wrap mt-4 mx-4">
+    <main className="flex flex-row flex-wrap justify-center mt-4 mx-4">
       {ALBUMS.map((album) => (
         <Image
           key={album.name}
@@ -14,8 +14,8 @@ export default function Home() {
           src={album.image}
           blurDataURL="/placeholder.png"
           alt={album.name}
-          width={250}
-          height={250}
+          width={220}
+          height={220}
         />
       ))}
     </main>
