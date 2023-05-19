@@ -6,7 +6,7 @@ import { ALBUMS } from "@/types"
 
 export default function Home() {
   return (
-    <main className="flex flex-row mt-4 mx-4">
+    <main className="flex flex-row flex-wrap mt-4 mx-4">
       {ALBUMS.map((album) => (
         <Image
           key={album.name}
