@@ -30,9 +30,11 @@ export default function Home() {
       />
       <main className="flex flex-row flex-wrap">
         {ALBUMS.sort(selectedSortMethod).map((album) => (
-          <div className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 relative">
+          <div
+            key={album.name}
+            className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 relative"
+          >
             <Image
-              key={album.name}
               className="cursor-pointer hover:blur-sm object-cover"
               src={album.image}
               blurDataURL="/placeholder.png"
