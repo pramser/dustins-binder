@@ -68,3 +68,24 @@ export const ALBUMS: Album[] = [
     image: "/the-dude.jpeg",
   },
 ]
+
+export const SORT_METHODS = [
+  {
+    name: "artist_a_to_z",
+    method: (a: Album, b: Album) => {
+      return a.artist > b.artist ? 1 : -1
+    },
+  },
+  {
+    name: "album_a_to_z",
+    method: (a: Album, b: Album) => {
+      return a.name > b.name ? 1 : -1
+    },
+  },
+  {
+    name: "release_old_to_new",
+    method: (a: Album, b: Album) => {
+      return a.releaseDate > b.releaseDate ? 1 : -1
+    },
+  },
+]
