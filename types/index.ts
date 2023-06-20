@@ -67,6 +67,48 @@ export const ALBUMS: Album[] = [
     releaseDate: new Date(1998, 5, 16),
     image: "/the-dude.jpeg",
   },
+  {
+    name: "3 Feet High and Rising",
+    artist: "De La Soul",
+    releaseDate: new Date(1989, 2, 3),
+    image: "/3-feet-high-and-rising.jpg",
+  },
+  {
+    name: "Illmatic",
+    artist: "Nas",
+    releaseDate: new Date(1994, 3, 19),
+    image: "/illmatic.jpeg",
+  },
+  {
+    name: "Nastradamus",
+    artist: "Nas",
+    releaseDate: new Date(1999, 10, 23),
+    image: "/nastradamus.jpeg",
+  },
+  {
+    name: "The Chronic",
+    artist: "Dr. Dre",
+    releaseDate: new Date(1992, 11, 15),
+    image: "/the-chronic.jpeg",
+  },
+  {
+    name: "Enter the Wu-Tang (36 Chambers)",
+    artist: "Wu-Tang Clan",
+    releaseDate: new Date(1993, 10, 9),
+    image: "/36-chambers.jpg",
+  },
+  {
+    name: "Midnight Marauders",
+    artist: "A Tribe Called Quest",
+    releaseDate: new Date(1993, 10, 9),
+    image: "/midnight-marauders.jpeg",
+  },
+  {
+    name: "The Blueprint",
+    artist: "Jay Z",
+    releaseDate: new Date(2001, 8, 11),
+    image: "/the-blueprint.jpeg",
+  },
 ]
 
 export const SORT_METHODS = [
