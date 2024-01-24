@@ -26,6 +26,24 @@ export const ALBUMS: Album[] = [
     image: "/my-turn-to-eat.jpeg",
   },
   {
+    name: "E. 1999 Eternal",
+    artist: "Bone Thugs-N-Harmony",
+    releaseDate: new Date(1995, 7, 25),
+    image: "/e-1999-eternal.jpeg",
+  },
+  {
+    name: "Confessions of Fire",
+    artist: "Cam'ron",
+    releaseDate: new Date(1998, 7, 21),
+    image: "/confessions-of-fire.jpeg",
+  },
+  {
+    name: "Hit Em Where It Hurt",
+    artist: "Criminal Elament",
+    releaseDate: new Date(1993, 0, 1),
+    image: "/hit-em-where-it-hurt.jpeg",
+  },
+  {
     name: "3 Feet High and Rising",
     artist: "De La Soul",
     releaseDate: new Date(1989, 2, 3),
@@ -42,6 +60,12 @@ export const ALBUMS: Album[] = [
     artist: "Dr. Dre",
     releaseDate: new Date(1992, 11, 15),
     image: "/the-chronic.jpeg",
+  },
+  {
+    name: "The Score",
+    artist: "The Fugees",
+    releaseDate: new Date(1996, 1, 13),
+    image: "/the-score.jpeg",
   },
   {
     name: "For the Hell of It",
@@ -74,6 +98,12 @@ export const ALBUMS: Album[] = [
     image: "/the-blueprint.jpeg",
   },
   {
+    name: "400 Degreez",
+    artist: "Juvenile",
+    releaseDate: new Date(1998, 11, 3),
+    image: "/400-degreez.jpeg",
+  },
+  {
     name: "Justicizms",
     artist: "Kool & Deadly",
     releaseDate: new Date(1987, 0, 1),
@@ -84,6 +114,12 @@ export const ALBUMS: Album[] = [
     artist: "K9 Posse",
     releaseDate: new Date(1988, 0, 1),
     image: "/k9-posse.jpeg",
+  },
+  {
+    name: "The Wonderful World of Cease A Leo",
+    artist: "Lil' Cease",
+    releaseDate: new Date(1999, 2, 23),
+    image: "/the-wonderful-world-of-cease-a-leo.jpeg",
   },
   {
     name: "The Leprechaun",
@@ -108,6 +144,12 @@ export const ALBUMS: Album[] = [
     artist: "Mac Dre",
     releaseDate: new Date(2004, 6, 20),
     image: "/ronald-dregan.jpeg",
+  },
+  {
+    name: "Ghetto D",
+    artist: "Master P",
+    releaseDate: new Date(1997, 8, 2),
+    image: "/ghetto-d.jpeg",
   },
   {
     name: "Blackstar",
@@ -158,6 +200,12 @@ export const ALBUMS: Album[] = [
     image: "/funky-as-i-wanna-be.jpeg",
   },
   {
+    name: "Fear of a Black Planet",
+    artist: "Public Enemy",
+    releaseDate: new Date(1990, 3, 10),
+    image: "/fear-of-a-black-planet.jpeg",
+  },
+  {
     name: "Only Built 4 Cuban Linx",
     artist: "Raekwon",
     releaseDate: new Date(1995, 7, 1),
@@ -176,10 +224,22 @@ export const ALBUMS: Album[] = [
     image: "/the-diary.jpeg",
   },
   {
+    name: "Doggystyle",
+    artist: "Snoop Dogg",
+    releaseDate: new Date(1993, 10, 23),
+    image: "/doggystyle.jpeg",
+  },
+  {
     name: "Give It 2 'Em Raw",
     artist: "Soulja Slim",
     releaseDate: new Date(1998, 4, 19),
     image: "/give-it-2-em-raw.jpeg",
+  },
+  {
+    name: "Da Baddest Bitch",
+    artist: "Trina",
+    releaseDate: new Date(2000, 2, 21),
+    image: "/da-baddest-bitch.jpeg",
   },
   {
     name: "All Eyez on Me",
