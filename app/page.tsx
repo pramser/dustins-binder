@@ -14,6 +14,7 @@ import { ALBUMS, SORT_METHODS } from "@/types"
 
 export default function Home() {
   const [selectedSortIndex, setSelectedSortIndex] = useState(0)
+  const [selectedAlbum, setSelectedAlbum] = useState<any | null>(null)
 
   const selectNextSortMethod = () => {
     var next = selectedSortIndex + 1
@@ -24,19 +25,14 @@ export default function Home() {
 
   return (
     <>
-      <Header
-        selectedSortName={SORT_METHODS[selectedSortIndex].name}
-        sortButtonOnClick={selectNextSortMethod}
-      />
+      <Header selectedSortName={SORT_METHODS[selectedSortIndex].name} sortButtonOnClick={selectNextSortMethod} />
       <main className="flex flex-row flex-wrap">
         {ALBUMS.sort(selectedSortMethod).map((album) => (
-          <div
-            key={album.name}
-            className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 relative"
-          >
+          <div key={album.name} className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 relative">
             <Image
               className="cursor-pointer hover:blur-sm object-cover"
               src={album.image}
+              onClick={() => setSelectedAlbum(album)}
               blurDataURL="/placeholder.png"
               alt={album.name}
               height={0}
@@ -46,6 +42,19 @@ export default function Home() {
             />
           </div>
         ))}
+        <div
+          onClick={() => setSelectedAlbum(null)}
+          className={`fixed top-0 h-full w-full z-10 ${selectedAlbum ? "visible" : "hidden"}`}
+        >
+          <Image
+            src={selectedAlbum?.image}
+            style={{ width: "auto", height: "100%" }}
+            alt="Album image"
+            sizes="100vw"
+            width={0}
+            height={0}
+          />
+        </div>
       </main>
     </>
   )
