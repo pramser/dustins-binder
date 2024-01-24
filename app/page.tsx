@@ -37,7 +37,7 @@ export default function Home() {
               alt={album.name}
               height={0}
               width={0}
-              sizes="100vw"
+              sizes="50vw"
               style={{ width: "100%", height: "auto" }}
             />
           </div>
