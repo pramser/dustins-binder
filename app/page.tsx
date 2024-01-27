@@ -33,6 +33,7 @@ export default function Home() {
               className="cursor-pointer hover:blur-sm object-cover"
               src={album.image}
               onClick={() => setSelectedAlbum(album)}
+              placeholder="blur"
               blurDataURL="/placeholder.png"
               alt={album.name}
               height={0}
@@ -54,6 +55,7 @@ export default function Home() {
             width={0}
             height={0}
           />
+          <p className="text-white text-8xl z-50 relative">ALBUM INFORMATION</p>
         </div>
       </main>
     </>
