@@ -49,13 +49,12 @@ export default function Home() {
         >
           <Image
             src={selectedAlbum?.image}
-            style={{ width: "auto", height: "100%" }}
+            className="w-full h-auto md:w-auto md:h-full"
             alt="Album image"
             sizes="100vw"
             width={0}
             height={0}
           />
-          <p className="text-white text-8xl z-50 relative">ALBUM INFORMATION</p>
         </div>
       </main>
     </>
