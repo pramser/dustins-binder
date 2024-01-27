@@ -47,7 +47,7 @@ export const ALBUMS: Album[] = [
     name: "3 Feet High and Rising",
     artist: "De La Soul",
     releaseDate: new Date(1989, 2, 3),
-    image: "/3-feet-high-and-rising.jpg",
+    image: "/3-feet-high-and-rising.png",
   },
   {
     name: "The Dude",
@@ -251,7 +251,7 @@ export const ALBUMS: Album[] = [
     name: "Enter the Wu-Tang (36 Chambers)",
     artist: "Wu-Tang Clan",
     releaseDate: new Date(1993, 10, 9),
-    image: "/36-chambers.jpg",
+    image: "/36-chambers.jpeg",
   },
 ]
 
