@@ -34,7 +34,7 @@ export default function Home() {
               src={album.image}
               onClick={() => setSelectedAlbum(album)}
               placeholder="blur"
-              blurDataURL="/placeholder.png"
+              blurDataURL="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
               alt={album.name}
               height={0}
               width={0}
