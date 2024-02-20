@@ -40,7 +40,7 @@ export default function Home() {
         {ALBUMS.sort(selectedSortMethod).map((album) => (
           <div
             key={album.name}
-            className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 border-black hover:scale-125 hover:z-10 hover:shadow-3xl hover:border relative"
+            className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 hover:scale-90 hover:z-10 hover:shadow-3xl relative"
           >
             <Image
               className="cursor-pointer hover:z-20 object-cover"
