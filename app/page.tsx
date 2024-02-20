@@ -1,7 +1,7 @@
 "use client"
 
 // react
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 // next
 import Image from "next/image"
@@ -13,6 +13,16 @@ import Header from "@/components/header"
 import { ALBUMS, SORT_METHODS } from "@/types"
 
 export default function Home() {
+  useEffect(() => {
+    window.addEventListener(
+      "scroll",
+      () => {
+        document.body.style.setProperty("--scroll", window.scrollY.toString())
+      },
+      false
+    )
+  }, [])
+
   const [selectedSortIndex, setSelectedSortIndex] = useState(0)
   const [selectedAlbum, setSelectedAlbum] = useState<any | null>(null)
 
@@ -28,9 +38,12 @@ export default function Home() {
       <Header selectedSortName={SORT_METHODS[selectedSortIndex].name} sortButtonOnClick={selectNextSortMethod} />
       <main className="flex flex-row flex-wrap">
         {ALBUMS.sort(selectedSortMethod).map((album) => (
-          <div key={album.name} className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 relative">
+          <div
+            key={album.name}
+            className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 border-black hover:scale-125 hover:z-10 hover:shadow-3xl hover:border relative"
+          >
             <Image
-              className="cursor-pointer hover:blur-sm object-cover"
+              className="cursor-pointer hover:z-20 object-cover"
               src={album.image}
               onClick={() => setSelectedAlbum(album)}
               placeholder="blur"
@@ -43,6 +56,7 @@ export default function Home() {
             />
           </div>
         ))}
+        <div id="fader-box" />
         <div
           onClick={() => setSelectedAlbum(null)}
           className={`fixed top-0 h-full w-full z-10 ${selectedAlbum ? "visible" : "hidden"}`}
