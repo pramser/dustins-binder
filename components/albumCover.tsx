@@ -26,7 +26,7 @@ export default function AlbumCover({ album, setSelectedAlbum }: Props) {
         onClick={() => setSelectedAlbum(album)}
       >
         <p className="italic max-w-64 lg:max-w-48 text-lg text-center text-ellipsis truncate whitespace-nowrap">
-          "{album.name}"
+          &quot;{album.name}&quot;
         </p>
         <p className="font-bold max-w-64 lg:max-w-48 text-xl text-center text-ellipsis truncate whitespace-nowrap">
           {album.artist}
