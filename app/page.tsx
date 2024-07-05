@@ -8,6 +8,7 @@ import Image from "next/image"
 
 // components
 import Header from "@/components/header"
+import AlbumCover from "@/components/albumCover"
 
 // data
 import { ALBUMS, SORT_METHODS } from "@/types"
@@ -38,23 +39,7 @@ export default function Home() {
       <Header selectedSortName={SORT_METHODS[selectedSortIndex].name} sortButtonOnClick={selectNextSortMethod} />
       <main className="flex flex-row flex-wrap">
         {ALBUMS.sort(selectedSortMethod).map((album) => (
-          <div
-            key={album.name}
-            className="w-fill h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 hover:scale-90 hover:z-10 hover:shadow-3xl relative"
-          >
-            <Image
-              className="cursor-pointer hover:z-20 object-cover"
-              src={album.image}
-              onClick={() => setSelectedAlbum(album)}
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="
-              alt={album.name}
-              height={0}
-              width={0}
-              sizes="50vw"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </div>
+          <AlbumCover key={album.name} album={album} setSelectedAlbum={setSelectedAlbum} />
         ))}
         <div id="fader-box" />
         <div
