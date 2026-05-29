@@ -40,6 +40,10 @@ export default function AlbumCover({ album, setSelectedAlbum }: Props) {
         <p className="max-w-full text-sm text-center text-ellipsis truncate whitespace-nowrap">
           {album.releaseDate.getFullYear()}
         </p>
+        <p className="mt-2 max-w-full px-3 text-center text-xs font-medium uppercase tracking-wide text-neutral-700">
+          <span className="block truncate">{album.region}</span>
+          <span className="block truncate">{album.label}</span>
+        </p>
       </div>
     </div>
   )

@@ -3,4 +3,7 @@ export type Album = {
   artist: string
   releaseDate: Date
   image: string
+  region: string
+  label: string
+  whyItMatters: string
 }

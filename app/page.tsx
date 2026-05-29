@@ -45,10 +45,10 @@ export default function Home() {
         {selectedAlbum && (
           <div
             onClick={() => setSelectedAlbum(null)}
-            className="fixed inset-0 z-20 grid cursor-zoom-out place-items-center bg-black/85 p-4 text-white backdrop-blur-sm md:p-8"
+            className="fixed inset-0 z-20 grid cursor-zoom-out place-items-center overflow-y-auto bg-black/85 p-4 text-white backdrop-blur-sm md:p-8"
           >
-            <div className="flex max-h-full w-full max-w-5xl flex-col items-center gap-4">
-              <div className="relative aspect-square w-full max-w-[min(92vw,calc(100vh-10rem))] overflow-hidden shadow-2xl">
+            <div className="flex min-h-full w-full max-w-6xl flex-col items-center justify-center gap-5 py-6 lg:min-h-0 lg:flex-row lg:items-center lg:gap-8 lg:py-0">
+              <div className="relative aspect-square w-full max-w-[min(92vw,calc(100vh-16rem))] overflow-hidden shadow-2xl sm:max-w-[min(72vw,calc(100vh-12rem))] lg:max-w-[min(58vw,calc(100vh-4rem))]">
                 <Image
                   src={selectedAlbum.image}
                   className="object-contain"
@@ -58,12 +58,26 @@ export default function Home() {
                   priority
                 />
               </div>
-              <div className="max-w-[min(92vw,42rem)] text-center drop-shadow-lg">
+              <div className="w-full max-w-[min(92vw,36rem)] text-center drop-shadow-lg lg:max-w-sm lg:text-left">
                 <p className="text-sm font-medium uppercase tracking-wide text-white/70">
                   {selectedAlbum.artist}
                 </p>
                 <h1 className="text-2xl font-bold md:text-4xl">{selectedAlbum.name}</h1>
                 <p className="mt-1 text-base text-white/80">{selectedAlbum.releaseDate.getFullYear()}</p>
+                <dl className="mt-5 grid grid-cols-2 gap-3 text-left sm:mx-auto sm:max-w-md lg:mx-0">
+                  <div className="border-l border-white/25 pl-3">
+                    <dt className="text-xs font-semibold uppercase tracking-wide text-white/50">Region</dt>
+                    <dd className="mt-1 text-sm font-medium text-white">{selectedAlbum.region}</dd>
+                  </div>
+                  <div className="border-l border-white/25 pl-3">
+                    <dt className="text-xs font-semibold uppercase tracking-wide text-white/50">Label</dt>
+                    <dd className="mt-1 text-sm font-medium text-white">{selectedAlbum.label}</dd>
+                  </div>
+                </dl>
+                <div className="mt-5 border-t border-white/20 pt-4 text-left">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-white/50">Why It Matters</p>
+                  <p className="mt-2 text-sm leading-6 text-white/85 md:text-base">{selectedAlbum.whyItMatters}</p>
+                </div>
               </div>
             </div>
           </div>
