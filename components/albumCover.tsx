@@ -9,7 +9,11 @@ interface Props {
 
 export default function AlbumCover({ album, setSelectedAlbum }: Props) {
   return (
-    <div key={album.name} className="w-full h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 relative">
+    <div
+      key={album.name}
+      className="group w-full h-fit md:w-1/4 md:h-1/4 lg:w-1/6 lg:h-1/6 relative"
+      onClick={() => setSelectedAlbum(album)}
+    >
       <Image
         className="cursor-pointer object-cover z-0"
         src={album.image}
@@ -21,10 +25,7 @@ export default function AlbumCover({ album, setSelectedAlbum }: Props) {
         sizes="50vw"
         style={{ width: "100%", height: "auto" }}
       />
-      <div
-        className="w-full h-full bg-white/75 duration-300 inset-0 opacity-0 hover:opacity-100 absolute z-10 flex flex-col justify-center items-center"
-        onClick={() => setSelectedAlbum(album)}
-      >
+      <div className="pointer-events-none w-full h-full bg-white/75 duration-300 inset-0 opacity-0 group-hover:opacity-100 absolute z-10 flex flex-col justify-center items-center">
         <p className="italic max-w-full text-lg text-center text-ellipsis truncate whitespace-nowrap">
           &quot;{album.name}&quot;
         </p>

@@ -43,15 +43,29 @@ export default function Home() {
         ))}
         <div id="fader-box" />
         {selectedAlbum && (
-          <div onClick={() => setSelectedAlbum(null)} className="fixed top-0 h-full w-full z-10">
-            <Image
-              src={selectedAlbum.image}
-              className="w-full h-auto md:w-auto md:h-full"
-              alt="Album image"
-              sizes="100vw"
-              width={0}
-              height={0}
-            />
+          <div
+            onClick={() => setSelectedAlbum(null)}
+            className="fixed inset-0 z-20 grid cursor-zoom-out place-items-center bg-black/85 p-4 text-white backdrop-blur-sm md:p-8"
+          >
+            <div className="flex max-h-full w-full max-w-5xl flex-col items-center gap-4">
+              <div className="relative aspect-square w-full max-w-[min(92vw,calc(100vh-10rem))] overflow-hidden shadow-2xl">
+                <Image
+                  src={selectedAlbum.image}
+                  className="object-contain"
+                  alt={selectedAlbum.name}
+                  sizes="(min-width: 768px) 80vh, 92vw"
+                  fill
+                  priority
+                />
+              </div>
+              <div className="max-w-[min(92vw,42rem)] text-center drop-shadow-lg">
+                <p className="text-sm font-medium uppercase tracking-wide text-white/70">
+                  {selectedAlbum.artist}
+                </p>
+                <h1 className="text-2xl font-bold md:text-4xl">{selectedAlbum.name}</h1>
+                <p className="mt-1 text-base text-white/80">{selectedAlbum.releaseDate.getFullYear()}</p>
+              </div>
+            </div>
           </div>
         )}
       </main>
